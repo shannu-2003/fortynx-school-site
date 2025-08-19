@@ -1,0 +1,309 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fortynx School — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="BrightLeaf Academy — modern, caring, and creative learning for young minds." />
+  <style>
+    :root{
+      --primary:#0f6bff;
+      --accent:#06b6d4;
+      --muted:#6b7280;
+      --radius:14px;
+      --card:#ffffff;
+      --bg:#f6f8fb;
+      --glass: rgba(255,255,255,0.7);
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#0f172a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    nav{backdrop-filter:blur(6px);background:rgba(255,255,255,0.6);box-shadow:0 6px 18px rgba(15,23,42,0.06);border-radius:12px;padding:10px;margin:18px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    .nav-links{display:flex;gap:18px;align-items:center}
+    .nav-links a{color:inherit;text-decoration:none;padding:8px 12px;border-radius:8px}
+    .nav-links a.cta{background:var(--primary);color:white}
+    .hamburger{display:none;border:0;background:none;font-size:22px}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:36px 0}
+    .hero .lead{background:var(--glass);padding:28px;border-radius:18px}
+    .lead h2{margin:0 0 8px;font-size:28px}
+    .lead p{margin:0 0 18px;color:var(--muted)}
+    .lead .buttons{display:flex;gap:12px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none}
+    .btn.primary{background:var(--primary);color:white}
+    .btn.ghost{border:1px solid rgba(15,23,42,0.06);background:white}
+    .hero .hero-card{border-radius:18px;overflow:hidden;box-shadow:0 8px 30px rgba(15,23,42,0.07)}
+    .hero-card img{width:100%;height:100%;display:block}
+
+    section{margin:36px 0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .card h3{margin:0 0 8px}
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    .about{display:grid;grid-template-columns:320px 1fr;gap:18px;align-items:center}
+    .about img{width:100%;border-radius:12px}
+
+    .events-list{display:flex;flex-direction:column;gap:12px}
+    .event{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);box-shadow:0 6px 14px rgba(15,23,42,0.03)}
+    .event .time{font-weight:600;color:var(--primary);min-width:96px}
+
+    .contact-form{background:linear-gradient(180deg,#ffffff, #f9fbff);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+    textarea{min-height:120px;resize:vertical}
+
+    footer{padding:18px;margin-top:30px;border-radius:12px;background:linear-gradient(90deg,#f8fafc,#ffffff);}
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .about{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .nav-links{display:none}
+      .hamburger{display:block}
+    }
+    @media (max-width:520px){
+      .cards{grid-template-columns:1fr}
+      .fields{grid-template-columns:1fr}
+      .hero .lead h2{font-size:22px}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="nav-inner">
+        <div class="brand">
+          <div class="logo">BL</div>
+          <div>
+            <h1>Fortynx School</h1>
+            <p>Learn. Grow. Shine.</p>
+          </div>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#facilities">Facilities</a>
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+          <a href="#apply" class="cta">Enroll Now</a>
+        </div>
+
+        <button class="hamburger" id="hamb">☰</button>
+      </div>
+    </nav>
+
+    <main id="home">
+      <section class="hero">
+        <div class="lead">
+          <h2>Welcome to Fortynx School</h2>
+          <p>Where curiosity meets guidance — a modern place for students to learn, explore, and become confident thinkers.</p>
+          <div class="buttons">
+            <a href="#apply" class="btn primary">Apply Now</a>
+            <a href="#about" class="btn ghost">Learn More</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <div style="display:flex;gap:12px">
+              <div style="text-align:center">
+                <div style="font-weight:700;font-size:18px">25+</div>
+                <div style="font-size:12px;color:var(--muted)">Experienced Teachers</div>
+              </div>
+              <div style="text-align:center">
+                <div style="font-weight:700;font-size:18px">1200+</div>
+                <div style="font-size:12px;color:var(--muted)">Happy Students</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="C:\Users\LENOVO\Downloads\haseeb-modi-T921iC2fkJk-unsplash.jpg" alt="students learning">
+        </div>
+      </section>
+
+      <section id="facilities">
+        <h2>Facilities & Academics</h2>
+        <p style="color:var(--muted);margin-top:6px">Modern classrooms, dedicated labs, and an activity-rich curriculum built for holistic growth.</p>
+
+        <div class="cards" style="margin-top:18px">
+          <div class="card">
+            <h3>Smart Classrooms</h3>
+            <p style="color:var(--muted)">Equipped with digital boards and collaborative seating to encourage interactive learning.</p>
+          </div>
+          <div class="card">
+            <h3>Science & Robotics Lab</h3>
+            <p style="color:var(--muted)">Hands-on labs where students build, test, and learn real-world STEM skills.</p>
+          </div>
+          <div class="card">
+            <h3>Sports & Play Area</h3>
+            <p style="color:var(--muted)">Large playfields and trained coaches for football, cricket, and athletics.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px" class="grid-two">
+          <div class="card">
+            <h3>Academic Streams</h3>
+            <ul style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Primary Years Program</li>
+              <li>Middle School (Mathematics focus)</li>
+              <li>Senior Secondary (Science & Commerce)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Teaching Approach</h3>
+            <p style="color:var(--muted)">Project-based learning, regular assessments, mentoring, and career guidance for older students.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <img src="C:\Users\LENOVO\Downloads\mr-a-photo-studio-OstwB_-Fpr8-unsplash.jpg" alt="school building">
+        <div>
+          <h2>About Us</h2>
+          <p style="color:var(--muted)">Established in 2010, Fortynx School began as a small neighborhood school with a big vision: create a caring environment where every child discovers their strengths. Over the years we've grown into a vibrant community of learners, parents, and educators committed to excellence.</p>
+
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="card" style="flex:1;min-width:180px">
+              <h3>Our Vision</h3>
+              <p style="color:var(--muted);margin:0">Nurture future leaders who are compassionate, curious, and confident.</p>
+            </div>
+            <div class="card" style="flex:1;min-width:180px">
+              <h3>Our Mission</h3>
+              <p style="color:var(--muted);margin:0">Deliver high-quality education with focus on values and life skills.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events">
+        <h2>Upcoming Events</h2>
+        <div class="events-list" style="margin-top:12px">
+          <div class="event">
+            <div class="time">Aug 30</div>
+            <div>
+              <div style="font-weight:600">Science Fair 2025</div>
+              <div style="color:var(--muted);font-size:13px">Students present projects created during the semester.</div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="time">Sep 10</div>
+            <div>
+              <div style="font-weight:600">Inter-school Football Tournament</div>
+              <div style="color:var(--muted);font-size:13px">Our U-14 team will host and play matches at the school ground.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="grid-two">
+        <div>
+          <h2>Contact Us</h2>
+          <p style="color:var(--muted)">Questions about admissions, fees, or campus visits? Drop a message and we'll get back within 2 business days.</p>
+
+          <div class="contact-form" style="margin-top:12px">
+            <form id="contactForm" onsubmit="return submitForm(event)">
+              <div class="fields">
+                <input type="text" id="name" placeholder="Your name" required>
+                <input type="email" id="email" placeholder="Email address" required>
+              </div>
+              <div style="margin-top:12px">
+                <input type="text" id="subject" placeholder="Subject" required>
+              </div>
+              <div style="margin-top:12px">
+                <textarea id="message" placeholder="Message"></textarea>
+              </div>
+              <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+                <button class="btn primary" type="submit">Send Message</button>
+                <div id="formStatus" style="color:var(--muted);font-size:13px"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <h2 id="apply">Visit & Apply</h2>
+          <p style="color:var(--muted)">Come see the campus and meet our staff. Schedule a visit or apply online.</p>
+
+          <div class="card" style="margin-top:12px">
+            <h3>Office Hours</h3>
+            <p style="color:var(--muted);margin:4px 0">Mon - Fri: 9:00 AM - 4:00 PM</p>
+            <p style="color:var(--muted);margin:4px 0">Phone: +91 9515848847</p>
+            <p style="color:var(--muted);margin:4px 0">Email: admissions@fortynx.edu</p>
+            <a href="https://www.google.com/maps" target="_blank" class="btn ghost" style="margin-top:10px">View on Map</a>
+          </div>
+
+          <div style="margin-top:12px" class="card">
+            <h3>Quick Apply</h3>
+            <p style="color:var(--muted);margin:6px 0">Use the button below to download the application form (PDF) and send it to admissions.</p>
+            <a href="#" class="btn primary">Download Form</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>Fortynx School</h3>
+          <p style="color:var(--muted);margin-top:6px">A caring place for curious minds. © 2025 Fortynx School</p>
+        </div>
+        <div style="text-align:right">
+          <div style="margin-bottom:8px">Follow us</div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    const hamb = document.getElementById('hamb');
+    const navLinks = document.getElementById('navLinks');
+    hamb.addEventListener('click', ()=>{
+      if(navLinks.style.display === 'flex') navLinks.style.display = 'none';
+      else navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+      navLinks.style.gap = '8px';
+      navLinks.style.position = 'absolute';
+      navLinks.style.right = '18px';
+      navLinks.style.top = '70px';
+      navLinks.style.background = 'white';
+      navLinks.style.padding = '12px';
+      navLinks.style.borderRadius = '10px';
+      navLinks.style.boxShadow = '0 8px 30px rgba(15,23,42,0.08)';
+    });
+
+    function submitForm(e){
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = 'Sending...';
+      
+      setTimeout(()=>{
+        status.textContent = 'Thanks — we received your message.';
+        document.getElementById('contactForm').reset();
+      },900);
+      return false;
+    }
+  </script>
+</body>
+</html>
